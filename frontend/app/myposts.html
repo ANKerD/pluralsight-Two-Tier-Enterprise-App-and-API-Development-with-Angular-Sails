@@ -1,0 +1,12 @@
+<div class="well">
+	<div class="row" ng-repeat="p in posts">
+		<a ui-sref="post({id: p.id})">
+			<div class="col-xs-8">
+				{{p.message | limitTo: 75}}...
+			</div>
+			<div class="text-muted col-xs-4 pull-right">
+				<span class="pull-right">{{p.scheduledFor | date: 'short' }}</span>
+			</div>
+		</a>
+	</div>
+</div>

@@ -1,0 +1,21 @@
+<div class="col-sm-8 col-md-6 col-md-offset-3 col-sm-offset-2">
+	<div class="well clearfix">
+		<div class="form-group">
+			<textarea rows="4" ng-model="message" type="text" class="form-control" placeholder="Tweet message"></textarea>
+		</div>
+		<p class="input-group">
+			<input class="form-control" uib-datepicker-popup is-open="opened" datepicker-options="datepickerOptions" ng-model="date"/>
+			<span class="input-group-btn">
+				<button class="btn btn-default" ng-click="open($event)">
+					<i class="glyphicon glyphicon-calendar"></i>
+				</button>
+			</span>
+		</p>
+		<!-- <div class="" uib-timepicker></div> -->
+		<div uib-timepicker ng-model="time" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="false"></div>
+		<div class="btn-group pull-right">
+			<button class="btn btn-danger" ng-show="isEditing" ng-click="delete()">Delete</button>
+			<button class="btn btn-default" ng-disabled="!date || !message" ng-click="save()">Save</button>
+		</div>
+	</div>
+</div>

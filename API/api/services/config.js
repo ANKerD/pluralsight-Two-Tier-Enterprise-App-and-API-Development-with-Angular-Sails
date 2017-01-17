@@ -1,0 +1,9 @@
+module.exports = {
+  // App Settings
+  TOKEN_SECRET: process.env.TOKEN_SECRET || 'YOUR_UNIQUE_JWT_TOKEN_SECRET',
+
+  TWITTER_KEY: process.env.TWITTER_KEY || '0aczHtISj2zkSElQrq7A96ukh',
+  TWITTER_SECRET: process.env.TWITTER_SECRET || '41NcSRYl5LN305uDnV6IKxa5FSAi57UfMR2w9SbhypZC2GPFwD',
+  TWITTER_CALLBACK: process.env.TWITTER_CALLBACK || 'http://127.0.0.1:8000',
+  SCHEDULER_INTERVAL: process.env.SCHEDULER_INTERVAL || 5000
+};

@@ -1,0 +1,7 @@
+<nav class="navbar navbar-default">
+	<div class="container">
+		<button class="btn btn-default" ui-sref='posts' ng-click="logout()" ng-show="isAuthenticated()">My Posts</button>
+		<button class="btn btn-primary" ui-sref='post' ng-click="logout()" ng-show="isAuthenticated()">New Post</button>
+		<button class="btn btn-link navbar-btn pull-right" ui-sref='logout' ng-click="logout()" ng-show="isAuthenticated()">Logout</button>
+	</div>
+</nav>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="utf-8">
+		<title>My index</title>
+		<!-- vendorInject:css -->
+		<link rel="stylesheet" href="vendor/angular-toastr.css">
+		<!-- endinject -->
+
+		<!-- inject:css -->
+		<link rel="stylesheet" href="bootstrap.min.css">
+		<link rel="stylesheet" href="main.css">
+		<!-- endinject -->
+	</head>
+	<body ng-controller='LoginCtrl'>
+		<nav class="navbar navbar-default">
+			<div class="container">
+
+				<button class="btn btn-primary" ui-sref='post({id: null})' ng-show="isAuthenticated()">New Post</button>
+				<button class="btn btn-link" ui-sref='posts' ng-show="isAuthenticated()">My Posts</button>
+
+				<button class="btn btn-primary pull-right" ng-click="login()" ng-hide="isAuthenticated()">Login</button>
+				<button class="btn btn-link navbar-btn pull-right" ng-click="logout()" ng-show="isAuthenticated()">Logout</button>
+			</div>
+		</nav>
+		<div class="container-fluid">
+			<div ng-if="isAuthenticated()" ui-view></div>
+		</div>
+
+		<!-- vendorInject:js -->
+		<script src="vendor/angular.js"></script>
+		<script src="vendor/satellizer.js"></script>
+		<script src="vendor/ui-bootstrap-tpls.js"></script>
+		<script src="vendor/angular-ui-router.js"></script>
+		<script src="vendor/angular-toastr.tpls.js"></script>
+		<script src="vendor/angular-animate.js"></script>
+		<!-- endinject -->
+
+		<!-- inject:js -->
+		<script src="js/app.js"></script>
+		<script src="js/login.js"></script>
+		<script src="js/myposts.js"></script>
+		<script src="js/post.js"></script>
+		<!-- endinject -->
+	</body>
+</html>
